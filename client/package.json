@@ -1,0 +1,19 @@
+{
+  "name": "technest-client",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host localhost",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-router-dom": "7.18.4"
+  },
+  "devDependencies": {
+    "vite": "7.3.7",
+    "@vitejs/plugin-react": "5.2.0"
+  }
+}
