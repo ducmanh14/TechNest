@@ -1,0 +1,185 @@
+/* Chi ap dung cho trang dang nhap / dang ky */
+main.tn-auth-main {
+  max-width: none;
+  min-height: 100svh;
+  margin: 0;
+  padding: 0;
+}
+
+.tn-auth-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
+  min-height: 100svh;
+  color: #242424;
+  background: #fff;
+}
+
+.tn-auth-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px clamp(28px, 4vw, 64px) 24px;
+  background: #edf3ef;
+}
+
+.tn-auth-brand {
+  align-self: flex-start;
+  color: #242424;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  text-decoration: none;
+}
+.tn-auth-brand span { color: #19836f; }
+.tn-auth-story { margin-top: 8px; }
+.tn-auth-kicker {
+  margin: 0 0 14px;
+  color: #267c69;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.tn-auth-story h2 {
+  margin: 0 0 16px;
+  font-size: clamp(27px, 2.8vw, 40px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -1.2px;
+}
+.tn-auth-story > p:last-child {
+  max-width: 390px;
+  margin: 0;
+  color: #607068;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.tn-auth-picture {
+  width: min(100%, 38svh, 340px);
+  margin: auto;
+}
+.tn-auth-picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 24px;
+}
+.tn-auth-visual-note {
+  margin: 0;
+  color: #607068;
+  font-size: 9px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+.tn-auth-form-side {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100svh;
+  padding: 32px clamp(24px, 5vw, 80px) 24px;
+}
+.tn-auth-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.tn-auth-mobile-brand { display: none; }
+.tn-auth-back {
+  margin-left: auto;
+  color: #646464;
+  font-size: 12px;
+  text-decoration: none;
+}
+.tn-auth-back:hover { color: #19836f; }
+.tn-auth-form-box {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 40px 0;
+}
+.tn-auth-form-box h1 {
+  margin: 0 0 14px;
+  font-size: clamp(27px, 2.5vw, 34px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -1px;
+}
+.tn-auth-description {
+  margin: 0 0 30px;
+  color: #727272;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.tn-auth-form label {
+  margin: 0 0 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.tn-auth-form input {
+  height: 50px;
+  margin-top: 9px;
+  padding: 12px 14px;
+  border: 1px solid #dfe4e1;
+  border-radius: 10px;
+  color: #242424;
+  background: #fafbfa;
+  font-size: 14px;
+}
+.tn-auth-form input::placeholder { color: #909792; }
+.tn-auth-form input:focus-visible {
+  border-color: #19836f;
+  outline: 3px solid #19836f20;
+  outline-offset: 1px;
+  background: #fff;
+}
+.tn-auth-password-field { margin-bottom: 20px; }
+.tn-auth-password-field > label { margin: 0; }
+.tn-auth-password-wrap { position: relative; display: block; margin-top: 9px; }
+.tn-auth-password-wrap input { margin-top: 0; padding-right: 54px; }
+.tn-auth-form .tn-auth-password-toggle {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 7px;
+  color: #737d77;
+  background: transparent;
+}
+.tn-auth-form .tn-auth-password-toggle:hover { background: #edf3ef; color: #19836f; }
+.tn-auth-form .tn-auth-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 50px;
+  margin-top: 12px;
+  border-radius: 10px;
+  background: #242424;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+.tn-auth-form .tn-auth-submit:hover { background: #19836f; }
+.tn-auth-hint { margin: -10px 0 20px; color: #727272; font-size: 12px; }
+.tn-auth-switch { margin: 24px 0 0; text-align: center; color: #727272; font-size: 13px; }
+.tn-auth-switch a { color: #19836f; font-weight: 600; text-underline-offset: 3px; }
+.tn-auth-copyright { margin: 0; text-align: center; color: #909792; font-size: 10px; line-height: 1.7; }
+.tn-auth-message { margin: 0 0 20px; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+
+@media (max-width: 760px) {
+  .tn-auth-layout { grid-template-columns: minmax(0, 1fr); }
+  .tn-auth-visual { display: none; }
+  .tn-auth-form-side { padding: 24px 22px 20px; }
+  .tn-auth-mobile-brand { display: block; font-size: 27px; }
+  .tn-auth-back { font-size: 11px; }
+  .tn-auth-form-box { padding: 44px 0; }
+  .tn-auth-form-box h1 { font-size: 29px; }
+}

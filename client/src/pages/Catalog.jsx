@@ -1,3 +1,4 @@
+import ProductCard from "../components/ProductCard";
 import { useEffect, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { api, money } from "../services/api";
@@ -53,7 +54,10 @@ export function Catalog() {
             Khám phá sản phẩm ↓
           </a>
         </div>
-        <img src="/images/laptop.svg" alt="Laptop minh họa TechNest" />
+        <img
+          src="/images/products/01-laptop.png"
+          alt="Laptop màu bạc — ảnh minh họa TechNest"
+        />
       </section>
       <section id="products">
         <div className="section-head">
@@ -135,26 +139,7 @@ export function Catalog() {
         ) : (
           <div className="grid">
             {result.data.map((p) => (
-              <Link
-                to={"/products/" + p.id}
-                className="product panel"
-                key={p.id}
-              >
-                <div className="product-image">
-                  <img src={p.image_path} alt={p.name} />
-                  <span className="badge">
-                    {p.stock > 0 ? "Còn hàng" : "Hết hàng"}
-                  </span>
-                </div>
-                <div className="product-info">
-                  <small>
-                    {p.category_name} / {p.brand_name}
-                  </small>
-                  <h3>{p.name}</h3>
-                  <strong>{money(p.price)}</strong>
-                  <span className="product-cta">Xem chi tiết →</span>
-                </div>
-              </Link>
+              <ProductCard key={p.id} product={p} />
             ))}
           </div>
         )}

@@ -37,6 +37,18 @@ export async function api(path, options = {}) {
       result.code,
     );
   }
+  const pathname = path.split("?")[0];
+
+  const cartChanged =
+    ["POST", "PUT", "DELETE"].includes(method) &&
+    /^\/cart\/items(?:\/\d+)?$/.test(pathname);
+
+  const orderCreated =
+    method === "POST" && pathname === "/orders";
+
+  if (cartChanged || orderCreated) {
+    window.dispatchEvent(new Event("cart-changed"));
+  }
   return result;
 }
 export const money = (value) =>

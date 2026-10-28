@@ -1,0 +1,197 @@
+{
+  "products": [
+    {
+      "label": "Laptop",
+      "path": "/images/products/01-laptop.png",
+      "categories": [
+        "Laptop",
+        "Máy tính xách tay"
+      ]
+    },
+    {
+      "label": "Điện thoại",
+      "path": "/images/products/02-smartphone.png",
+      "categories": [
+        "Điện thoại",
+        "Smartphone"
+      ]
+    },
+    {
+      "label": "Tai nghe chụp tai",
+      "path": "/images/products/03-headphones.png",
+      "categories": [
+        "Phụ kiện",
+        "Tai nghe",
+        "Tai nghe chụp tai"
+      ]
+    },
+    {
+      "label": "Máy tính để bàn",
+      "path": "/images/products/04-desktop-pc.png",
+      "categories": [
+        "Máy tính để bàn",
+        "PC"
+      ]
+    },
+    {
+      "label": "Màn hình máy tính",
+      "path": "/images/products/05-monitor.png",
+      "categories": [
+        "Màn hình",
+        "Màn hình máy tính"
+      ]
+    },
+    {
+      "label": "Máy tính bảng",
+      "path": "/images/products/06-tablet.png",
+      "categories": [
+        "Máy tính bảng",
+        "Tablet"
+      ]
+    },
+    {
+      "label": "Bàn phím cơ",
+      "path": "/images/products/07-mechanical-keyboard.png",
+      "categories": [
+        "Bàn phím",
+        "Bàn phím cơ"
+      ]
+    },
+    {
+      "label": "Chuột không dây",
+      "path": "/images/products/08-wireless-mouse.png",
+      "categories": [
+        "Chuột",
+        "Chuột không dây"
+      ]
+    },
+    {
+      "label": "Tai nghe không dây",
+      "path": "/images/products/09-wireless-earbuds.png",
+      "categories": [
+        "Tai nghe không dây",
+        "Earbuds"
+      ]
+    },
+    {
+      "label": "Đồng hồ thông minh",
+      "path": "/images/products/10-smartwatch.png",
+      "categories": [
+        "Đồng hồ thông minh",
+        "Smartwatch"
+      ]
+    },
+    {
+      "label": "Loa Bluetooth",
+      "path": "/images/products/11-bluetooth-speaker.png",
+      "categories": [
+        "Loa",
+        "Loa Bluetooth"
+      ]
+    },
+    {
+      "label": "Pin sạc dự phòng",
+      "path": "/images/products/12-power-bank.png",
+      "categories": [
+        "Pin dự phòng",
+        "Pin sạc dự phòng"
+      ]
+    },
+    {
+      "label": "Hub chuyển đổi USB-C",
+      "path": "/images/products/13-usb-c-hub.png",
+      "categories": [
+        "Hub USB-C",
+        "Hub chuyển đổi USB-C"
+      ]
+    },
+    {
+      "label": "Ổ SSD di động",
+      "path": "/images/products/14-portable-ssd.png",
+      "categories": [
+        "SSD",
+        "Ổ SSD",
+        "Ổ SSD di động"
+      ]
+    },
+    {
+      "label": "Bộ phát Wi-Fi",
+      "path": "/images/products/15-wifi-router.png",
+      "categories": [
+        "Router",
+        "Wi-Fi",
+        "Bộ phát Wi-Fi"
+      ]
+    },
+    {
+      "label": "Webcam",
+      "path": "/images/products/16-webcam.png",
+      "categories": [
+        "Webcam"
+      ]
+    },
+    {
+      "label": "Tay cầm chơi game",
+      "path": "/images/products/17-game-controller.png",
+      "categories": [
+        "Tay cầm",
+        "Tay cầm chơi game"
+      ]
+    },
+    {
+      "label": "Micro thu âm USB",
+      "path": "/images/products/18-usb-microphone.png",
+      "categories": [
+        "Micro",
+        "Micro thu âm",
+        "Micro thu âm USB"
+      ]
+    },
+    {
+      "label": "Máy ảnh kỹ thuật số",
+      "path": "/images/products/19-digital-camera.png",
+      "categories": [
+        "Máy ảnh",
+        "Máy ảnh kỹ thuật số"
+      ]
+    },
+    {
+      "label": "Củ sạc nhanh",
+      "path": "/images/products/20-gan-charger.png",
+      "categories": [
+        "Củ sạc",
+        "Sạc nhanh",
+        "Củ sạc nhanh"
+      ]
+    },
+    {
+      "label": "Iphone Đùa",
+      "path": "/images/products/21-iphone-duo.png",
+      "categories": []
+    },
+    {
+      "label": "Iphone 18",
+      "path": "/images/products/22-iphone-18-pro-max.png",
+      "categories": []
+    },
+    {
+      "label": "Samsung fold",
+      "path": "/images/products/23-samsung-galaxy-z-fold8.png",
+      "categories": []
+    }
+  ],
+  "legacy": [
+    {
+      "label": "Laptop — SVG cũ",
+      "path": "/images/laptop.svg"
+    },
+    {
+      "label": "Điện thoại — SVG cũ",
+      "path": "/images/phone.svg"
+    },
+    {
+      "label": "Tai nghe — SVG cũ",
+      "path": "/images/headphones.svg"
+    }
+  ]
+}

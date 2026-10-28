@@ -553,3 +553,751 @@ footer strong {
     flex-wrap: wrap;
   }
 }
+
+/* ===== TECHNEST UI REFRESH — CHẶNG 1 ===== */
+
+:root {
+  --ui-text: #242424;
+  --ui-muted: #646464;
+  --ui-background: #ffffff;
+  --ui-surface: #f4f4f4;
+  --ui-border: #e4e4e4;
+  --ui-accent: #d4f5ef;
+
+  color: var(--ui-text);
+  background: var(--ui-background);
+}
+
+body {
+  background: var(--ui-background);
+}
+
+/* Nút chính */
+
+button,
+.button {
+  background: var(--ui-text);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 12px 24px;
+}
+
+button:hover,
+.button:hover {
+  background: #424242;
+}
+
+button.secondary {
+  background: #eeeeee;
+  color: var(--ui-text);
+}
+
+button.secondary:hover {
+  background: #dddddd;
+}
+
+/* Header */
+
+header {
+  border-bottom: 1px solid var(--ui-border);
+}
+
+.logo {
+  color: var(--ui-text);
+}
+
+.logo span {
+  color: inherit;
+}
+
+.logo i {
+  color: #19836f;
+}
+
+nav a:hover {
+  color: #19836f;
+}
+
+/* Banner */
+
+.hero {
+  background: var(--ui-surface);
+  border-radius: 24px;
+  min-height: 420px;
+  padding: 48px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 4.5vw, 60px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.08;
+}
+
+.hero p {
+  color: var(--ui-muted);
+  font-size: 17px;
+}
+
+.hero .eyebrow {
+  color: var(--ui-text);
+}
+
+.hero .button {
+  background: var(--ui-accent);
+  color: var(--ui-text);
+}
+
+.hero .button:hover {
+  background: #bde9df;
+}
+
+/* Danh sách sản phẩm */
+
+#products {
+  scroll-margin-top: 120px;
+}
+
+#products .section-head {
+  margin-top: 56px;
+}
+
+#products .section-head h2 {
+  font-size: clamp(28px, 3vw, 38px);
+  letter-spacing: -1px;
+}
+
+#products .grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+#products .product {
+  border: 1px solid var(--ui-border);
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+#products .product-image {
+  height: 260px;
+  padding: 32px;
+  background: var(--ui-surface);
+}
+
+#products .product-info {
+  padding: 24px;
+}
+
+#products .product-info small {
+  color: var(--ui-muted);
+}
+
+#products .product h3 {
+  font-size: 18px;
+}
+
+#products .product strong {
+  color: var(--ui-text);
+  font-size: 23px;
+}
+
+/* Tablet và điện thoại */
+
+@media (max-width: 1000px) {
+  #products .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: auto;
+    padding: 28px 22px;
+    border-radius: 18px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  #products .grid {
+    grid-template-columns: 1fr;
+  }
+
+  #products .product-image {
+    height: 240px;
+  }
+}
+
+/* ===== TECHNEST UI REFRESH — CHẶNG 2 ===== */
+
+.tn-header {
+  background: #fff;
+  border-bottom: 1px solid var(--ui-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.tn-announcement {
+  background: var(--ui-accent);
+  color: var(--ui-text);
+  padding: 7px 16px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.tn-header-main {
+  max-width: 1280px;
+  margin: auto;
+  padding: 20px 30px;
+  display: grid;
+  grid-template-columns: auto minmax(180px, 1fr) auto;
+  align-items: center;
+  gap: 32px;
+}
+.tn-brand {
+  color: var(--ui-text);
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -1.7px;
+  text-decoration: none;
+  line-height: 1;
+}
+.tn-brand span { color: #19836f; }
+.tn-header-search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: #f1f2f3;
+}
+.tn-header-search:focus-within { border-color: #19836f; }
+.tn-header-search input {
+  min-width: 0;
+  flex: 1;
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ui-text);
+  font-size: 14px;
+}
+.tn-header-search input:focus-visible {
+  outline: 2px solid #19836f;
+  outline-offset: -2px;
+}
+.tn-header-search button {
+  flex: 0 0 auto;
+  padding: 9px 18px;
+  font-size: 13px;
+}
+.tn-account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.tn-user-name {
+  max-width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+.tn-account-loading { font-size: 13px; color: var(--ui-muted); }
+.tn-account .tn-login,
+.tn-account .tn-logout {
+  white-space: nowrap;
+  padding: 10px 18px;
+  font-size: 13px;
+}
+.tn-account .tn-logout { background: #eee; color: var(--ui-text); }
+.tn-account .tn-logout:hover { background: #ddd; }
+.tn-main-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 28px;
+  width: min(1280px, 100%);
+  margin: auto;
+  padding: 0 30px 12px;
+  overflow-x: auto;
+  font-size: 14px;
+}
+.tn-main-nav a {
+  flex: 0 0 auto;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  color: var(--ui-muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.tn-main-nav a:hover,
+.tn-main-nav a[aria-current="page"] {
+  color: var(--ui-text);
+  border-bottom-color: #19836f;
+}
+#products { scroll-margin-top: 190px; }
+.hero img {
+  width: min(100%, 360px);
+  height: auto;
+  max-height: none;
+  justify-self: center;
+  border-radius: 18px;
+}
+@media (max-width: 900px) {
+  .tn-header-main { gap: 18px; }
+  .tn-user-name { display: none; }
+}
+@media (max-width: 760px) {
+  .tn-header-main {
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    padding: 18px 16px 14px;
+  }
+  .tn-brand { font-size: 30px; }
+  .tn-header-search { grid-column: 1 / -1; grid-row: 2; }
+  .tn-main-nav { padding: 0 16px 10px; gap: 22px; }
+  .hero img { width: min(100%, 280px); }
+  #products { scroll-margin-top: 230px; }
+}
+
+/* ===== TECHNEST UI REFRESH — CHẶNG 3 ===== */
+
+.tn-category-section {
+  margin: 44px 0 12px;
+}
+.tn-category-heading h2 {
+  margin: 6px 0 24px;
+  font-size: clamp(25px, 3vw, 34px);
+  letter-spacing: -0.8px;
+}
+.tn-category-track {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 4px 2px 14px;
+}
+.tn-category-button {
+  flex: 0 0 132px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  color: var(--ui-text);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.tn-category-button:hover {
+  background: transparent;
+  color: #176c5b;
+}
+.tn-category-circle {
+  width: 112px;
+  height: 112px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: #efefef;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.tn-category-circle img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  object-fit: contain;
+}
+.tn-category-all {
+  background: var(--ui-accent);
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+.tn-category-letter {
+  color: #176c5b;
+  font-size: 34px;
+  font-weight: 800;
+}
+.tn-category-button[aria-pressed="true"] .tn-category-circle {
+  border-color: #176c5b;
+}
+.tn-category-button:hover .tn-category-circle {
+  transform: translateY(-2px);
+}
+#products .tn-filters {
+  grid-template-columns: repeat(5, minmax(0, 1fr)) auto;
+  gap: 12px;
+  align-items: end;
+  padding: 18px;
+  border-radius: 18px;
+  margin-bottom: 14px;
+}
+#products .tn-filters label {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ui-muted);
+}
+#products .tn-filters input,
+#products .tn-filters select {
+  height: 44px;
+  margin-top: 7px;
+  padding: 10px;
+  border-color: var(--ui-border);
+  border-radius: 10px;
+  color: var(--ui-text);
+  font-size: 14px;
+}
+#products .tn-filters input[type="hidden"] {
+  display: none;
+}
+#products .tn-filters button {
+  min-height: 44px;
+  white-space: nowrap;
+  font-size: 13px;
+}
+.tn-filter-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 14px 0 24px;
+  color: var(--ui-muted);
+  font-size: 14px;
+}
+.tn-filter-summary > span {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.tn-filter-summary button {
+  padding: 8px 14px;
+  font-size: 12px;
+}
+#products .tn-product-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--ui-border);
+  border-radius: 20px;
+  box-shadow: none;
+}
+#products .tn-product-card:hover {
+  border-color: #c3d9d1;
+  box-shadow: 0 12px 28px #142b2510;
+}
+#products .tn-product-card .product-image {
+  height: auto;
+  aspect-ratio: 1;
+  padding: 0;
+  background: #efefef;
+}
+#products .tn-product-card .product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#products .tn-stock-badge {
+  top: 14px;
+  left: 14px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #ffffffed;
+  color: #176c5b;
+  font-size: 11px;
+  font-weight: 600;
+}
+#products .tn-stock-badge.is-out {
+  color: #646464;
+}
+#products .tn-product-card .product-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+#products .tn-product-card .product-info small {
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+}
+#products .tn-product-card h3 {
+  display: -webkit-box;
+  min-height: 51px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  margin: 10px 0 16px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+#products .tn-product-card strong {
+  margin-top: auto;
+  color: var(--ui-text);
+  font-size: 23px;
+}
+#products .tn-product-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  padding-top: 15px;
+  border-color: var(--ui-border);
+  font-size: 13px;
+  font-weight: 600;
+}
+.tn-product-skeleton {
+  height: 410px;
+  border: 1px solid var(--ui-border);
+  border-radius: 20px;
+  background: linear-gradient(#ededed 0 68%, #f7f7f7 68% 100%);
+}
+.tn-empty-catalog {
+  padding: 44px 24px;
+  border: 1px dashed #cedbd5;
+  border-radius: 20px;
+  text-align: center;
+  background: #f7f9f8;
+}
+.tn-empty-catalog h3 {
+  margin-top: 0;
+}
+.tn-empty-catalog p {
+  color: var(--ui-muted);
+}
+#products .tn-pagination {
+  justify-content: center;
+  gap: 8px;
+  margin-top: 32px;
+}
+#products .tn-pagination button {
+  min-width: 42px;
+  padding: 10px 14px;
+}
+#products .tn-pagination button[aria-current="page"] {
+  background: var(--ui-text);
+  color: white;
+}
+.tn-admin-image-preview {
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin-top: 10px;
+  border: 1px solid var(--ui-border);
+  border-radius: 12px;
+  object-fit: contain;
+  background: #efefef;
+}
+@media (max-width: 1050px) {
+  #products .tn-filters {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .tn-category-section { margin-top: 32px; }
+  .tn-category-track { gap: 14px; }
+  .tn-category-button { flex-basis: 108px; font-size: 13px; }
+  .tn-category-circle { width: 92px; height: 92px; }
+  #products .tn-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 14px;
+    gap: 12px;
+  }
+  #products .tn-product-card .product-info { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tn-category-circle { transition: none; }
+  .tn-category-button:hover .tn-category-circle { transform: none; }
+}
+
+/* ===== TECHNEST — SỬA FONT VÀ KHUNG ẢNH ===== */
+
+:root {
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  font-weight: 400;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* Logo */
+.tn-brand {
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+/* Banner */
+.hero {
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(0, 0.85fr);
+  min-height: 400px;
+  gap: 40px;
+  padding: 40px;
+}
+
+.hero > div {
+  min-width: 0;
+}
+
+.hero h1 {
+  margin: 16px 0 20px;
+  font-size: clamp(30px, 3.2vw, 44px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -1.2px;
+}
+
+.hero p {
+  max-width: 460px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.hero > img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  max-height: none;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  justify-self: center;
+  border-radius: 18px;
+}
+
+.hero .eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.hero .button {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Ảnh sản phẩm: khung vuông, bỏ khoảng đệm cũ */
+#products .tn-product-card .product-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  overflow: hidden;
+}
+
+#products .tn-product-card .product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Tên và giá sản phẩm */
+#products .tn-product-card h3 {
+  min-height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+}
+
+#products .tn-product-card strong {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+#products .tn-product-card .product-info small {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.tn-category-heading h2,
+#products .section-head h2 {
+  font-weight: 600;
+  letter-spacing: -0.7px;
+}
+
+/* Điện thoại và màn hình nhỏ */
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: auto;
+    gap: 28px;
+    padding: 28px 22px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 6vw, 36px);
+    letter-spacing: -0.7px;
+  }
+
+  .hero > img {
+    max-width: 320px;
+    height: auto;
+  }
+}
+
+/* ===== TECHNEST — SỐ LƯỢNG GIỎ HÀNG ===== */
+
+.tn-main-nav .tn-cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tn-cart-count {
+  display: inline-flex;
+  align-items: center;                                                                                                                                                  
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: #19836f;                                                                                
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.footer-copyright {
+  margin: 0;
+  color: #646464;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ===== TECHNEST — HIỆU ỨNG CHUYỂN TRANG ===== */
+
+#root {
+  overflow-x: clip;
+}
+
+.tn-page-slide {
+  min-height: 100svh;
+}
