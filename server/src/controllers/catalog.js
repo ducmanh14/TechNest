@@ -1,4 +1,7 @@
 const model = require("../models/catalog");
+const productImagePaths = new Set(
+  require("../../../shared/product-images.json").products.map((image) => image.path),
+);
 const { HttpError, int, str, ok } = require("../utils");
 const { randomUUID } = require("node:crypto");
 function values(body) {
@@ -24,8 +27,8 @@ function values(body) {
  "Thông số phải là object JSON, tối đa 5.000 ký tự.",
  );
  const image = String(body.image_path || "/images/laptop.svg");
- if (!/^\/images\/[a-zA-Z0-9_-]+\.svg$/.test(image))
- throw new HttpError(400, "Chọn ảnh có trong thư mục images.");
+ if (!/^\/images\/[a-zA-Z0-9_-]+\.svg$/.test(image) && !productImagePaths.has(image))
+ throw new HttpError(400, "Chọn ảnh trong danh sách sản phẩm hoặc ảnh SVG hợp lệ.");
  return [
  int(body.category_id),
  int(body.brand_id),

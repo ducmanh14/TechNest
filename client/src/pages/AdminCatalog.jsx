@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { api, money } from "../services/api";
+import imageCatalog from "../../../shared/product-images.json";
+const imageOptions = [...imageCatalog.legacy, ...imageCatalog.products];
 const blank = {
   category_id: "",
   brand_id: "",
@@ -10,7 +12,7 @@ const blank = {
   price: 0,
   stock: 0,
   is_active: 1,
-  image_path: "/images/laptop.svg",
+  image_path: imageCatalog.products[0].path,
 };
 export default function AdminCatalog() {
   const [products, setProducts] = useState([]),
@@ -172,12 +174,19 @@ export default function AdminCatalog() {
                     setForm({ ...form, image_path: e.target.value })
                   }
                 >
-                  {["laptop", "phone", "headphones"].map((x) => (
-                    <option key={x} value={"/images/" + x + ".svg"}>
-                      {x}
+                  {imageOptions.map((image) => (
+                    <option key={image.path} value={image.path}>
+                      {image.label}
                     </option>
                   ))}
                 </select>
+                <img
+                  className="tn-admin-image-preview"
+                  src={form.image_path}
+                  alt="Ảnh sản phẩm đang chọn"
+                  width="1254"
+                  height="1254"
+                />
               </label>
               <label>
                 Trạng thái
